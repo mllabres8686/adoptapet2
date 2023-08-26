@@ -1,0 +1,69 @@
+.roleSwitch {
+    position: relative;
+    width: 100%;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select: none;
+}
+.roleSwitch-checkbox {
+    display: none;
+}
+.roleSwitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #FFFFFF;
+    border-radius: 0.25rem;
+}
+.roleSwitch-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.roleSwitch-inner:before, .roleSwitch-inner:after {
+    display: block;
+    float: left;
+    width: 50%;
+    height: 37px;
+    padding: 0;
+    line-height: 40px;
+    font-size: 1.2rem;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.roleSwitch-inner:before {
+    content: "PERSONA";
+    padding-left: 11px;
+    background-color: #ced4da;
+    color: #ffffff;
+}
+.roleSwitch-inner:after {
+    content: "ENTIDAD";
+    padding-right: 11px;
+    background-color: #ced4da;
+    color: #ffffff;
+    text-align: right;
+}
+.roleSwitch-switch {
+    display: block;
+    width: 45%;
+    height: 31px;
+    margin: 5px;
+    background: #F7455A;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: calc(55% - 25px);
+    border: 2px solid #FFFFFF;
+    border-radius: 0.1rem;
+    transition: all 0.3s ease-in 0s;
+}
+.roleSwitch-checkbox:checked + .roleSwitch-label .roleSwitch-inner {
+    margin-left: 0;
+}
+.roleSwitch-checkbox:checked + .roleSwitch-label .roleSwitch-switch {
+    right: 15px;
+    background-color: #82F536;
+}
